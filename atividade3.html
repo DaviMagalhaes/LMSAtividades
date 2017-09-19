@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Blog do Magalhães | Atividade 3</title>
+		<link rel="stylesheet" type="text/css" href="./estilos/estilo3.css">
+	</head>
+	<body>
+
+	<header>
+		<img height="100" src="./imagens/atividade3.png" /><h1>Blog do Magalhães</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="atividade3.html">Início</a></li>
+			<li><a href="#">Primeiro link</a></li>
+			<li><a href="#">Segundo link</a></li>
+			<li><a href="#">Terceiro link</a></li>
+		</ul>
+	</nav>
+
+	<article>
+
+		<section id="section1">
+			<h3>Primeiro artigo</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec rhoncus purus. Aenean vel sem vehicula, feugiat leo in, blandit elit. Quisque et blandit enim. Praesent condimentum justo vel eros bibendum, ut blandit lacus tristique. Pellentesque vestibulum lacinia auctor. In et augue faucibus, maximus nunc vitae, pretium lacus. Cras auctor nulla eu neque varius consequat. Aliquam risus elit, aliquam vel ante pulvinar, ullamcorper sodales lorem. Integer sollicitudin libero mauris, eget consectetur libero elementum sit amet.</p>
+			<p>Duis sed malesuada orci. Duis id euismod nisi. Praesent nec tortor efficitur, feugiat turpis nec, tempor velit. Etiam non felis vel magna tincidunt hendrerit. Phasellus eget elit porta, aliquet lorem id, egestas magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus consectetur justo sem, et tempus enim tincidunt quis. Mauris convallis, magna sit amet eleifend laoreet, felis turpis scelerisque magna, a pharetra erat diam sit amet felis. Aenean mattis a eros vel semper. Nullam sapien augue, commodo eu egestas eu, vehicula condimentum libero. Donec nec lorem ligula. Fusce porttitor neque arcu, sed gravida velit cursus at. Pellentesque ut malesuada turpis, sed vulputate libero. Aliquam semper purus vel quam condimentum, non dapibus magna vehicula.</p>
+		</section>
+
+		<section class="section2">
+			<h3>Segundo artigo</h3>
+			<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras id est pellentesque, imperdiet urna ut, lobortis odio. Nam sit amet sem ut risus pretium tempor. Etiam hendrerit ac arcu ut convallis. Integer ornare ullamcorper velit, vulputate ultricies felis consequat fringilla. Duis facilisis odio et ullamcorper pulvinar. Curabitur sed augue sed ligula pharetra volutpat. Ut tempus sed nulla ut laoreet. Cras vestibulum lacinia metus.</p>
+		</section>
+
+		<section>
+			<h3>Terceiro artigo</h3>
+			<p>
+				Com desenho SVG:<br />
+				<svg height="300" width="300">
+					<circle cx="150" cy="50" r="40" stroke="red" stroke-width="2" />
+					<line x1="150" y1="90" x2="150" y2="220" style="stroke:rgb(255,0,0);stroke-width:2" />
+					<line x1="150" y1="130" x2="200" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+					<line x1="150" y1="130" x2="100" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+					<line x1="150" y1="220" x2="200" y2="270" style="stroke:rgb(255,0,0);stroke-width:2" />
+					<line x1="150" y1="220" x2="100" y2="270" style="stroke:rgb(255,0,0);stroke-width:2" />
+					Seu navegador não suporta SVG.
+				</svg>
+			</p>
+		</section>
+
+		<section>
+			<h3>Quarto artigo</h3>
+			<p>
+				<u>Áudio:</u><br />
+				<audio controls>
+				<source src="./audios/DC03.mp3" type="audio/mpeg">
+					Seu navegador não suporta áudios sob HTML5.
+				</audio>
+				<br />
+				<u>Vídeo:</u><br />
+				<iframe width="420" height="315" src="https://www.youtube.com/embed/Wm6CUkswsNw"></iframe>
+			</p>
+		</section>
+
+		<section>
+			<h3>Quinto artigo</h3>
+			<p>
+				<u>Formulário</u>:<br />
+				<form action="https://www.w3schools.com/action_page.php" method="GET">
+					<label>Nome:</label>
+					<input type="text" name="nome" maxlength="15" /><br />
+					<label>Leitura: </label>
+					<input type="text" value="Lorem ipsum" readonly /><br />
+					<label>Numérico (25000 a 30000):</label>
+					<input type="number" name="numero" min="25000" max="30000" /><br />
+					<label>Sexo:</label>
+					<input type="radio" name="sexo" value="1" /> Masculino
+		  			<input type="radio" name="sexo" value="0" /> Feminino<br />
+		  			<label>Estudando:</label>
+		  			<input type="checkbox" name="estudo" value="0" /> HTML5
+					<input type="checkbox" name="estudo" value="1" /> CSS3
+					<input type="checkbox" name="estudo" value="2" /> JS<br />
+					<input type="submit" value="Enviar" />
+				</form>
+			</p>
+		</section>
+
+	</article>
+
+	<footer>
+		Todos os direitos reservados &copy; Davi Magalhães.
+	</footer>
+
+	</body>
+</html>
