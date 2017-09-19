@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a, a:hover, a:visited {text-decoration: none;}
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url('./fontes/fontawesome.eot') format('embedded-opentype'),
+  url('./fontes/fontawesome.woff') format('woff'),
+  url('./fontes/fontawesome.ttf') format('truetype');
+  font-style: normal;
+}
+
+body {background: #ededed;}
+
+header {padding: 15px; overflow: auto; background: #FFF;}
+header section {display: inline-block;}
+header #logo {float: left;}
+header #slogan {float: right;}
+header #logo a {
+  font-family: fontawesome;
+  font-size: 37px;
+  letter-spacing: 3px;
+  color: #555555;
+}
+header #logo a span {color: #4CAF50;}
+header #slogan span {
+  float: right;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+#menu-horizontal {
+  background-color: #4CAF50;
+  overflow: auto;
+}
+#menu-horizontal > ul {
+  list-style: none;
+}
+#menu-horizontal > ul > li > a, .dropdown .dropdown-button {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  float: left;
+  padding: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+#menu-horizontal > ul > li > a:hover, .dropdown .dropdown-button:hover {
+  background-color: #FFF;
+  color: #000;
+}
+
+.dropdown {
+  float: left;
+}
+.dropdown .dropdown-button {
+  float: none;
+}
+.dropdown-content {
+  position: absolute;
+  background-color: #DDD;
+  width: 200px;
+  padding: 10px;
+  display: none;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content > ul {
+  list-style: none;
+}
+.dropdown-content > ul > li > h1 {
+  font-weight: normal;
+  padding: 10px;
+}
+.dropdown-content > ul > li > a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.dropdown-content > ul > li > a:hover {
+  background-color: #BBB;
+}
+
+#menu-vertical {
+  width: 230px;
+  background: white;
+  padding: 10px 0;
+}
+#menu-vertical > ul {
+  list-style: none;
+}
+#menu-vertical > ul > li > h3 {
+  font-weight: normal;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+#menu-vertical > ul > li > a {
+  display: block;
+  padding: 5px 15px;
+  color: black;
+  font-size: 16px;
+}
+#menu-vertical > ul > li > a:hover {
+  background: #CCC;
+}
