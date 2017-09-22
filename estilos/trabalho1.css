@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a, a:hover, a:visited {
+  color: #2487D7;
+  text-decoration: none;
+}
+
+body {
+  background: #F7F7F7;
+}
+
+/* TOPO */
+#header-principal {overflow: auto;}
+#logo {
+  float: left;
+  padding: 20px;
+  line-height: 1;
+  width: 50%;
+  box-sizing: border-box;
+  vertical-align: bottom;
+}
+#logo img {height: 120px; float: left;}
+#logo h1 {font-size: 60px; margin-top: 9px;}
+#logo span {color: #888;}
+
+/* MENU */
+#nav-horizontal {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  overflow: auto;
+}
+#nav-horizontal ul {
+  list-style: none;
+  padding: 0 15px;
+}
+#nav-horizontal > ul > li > a {
+  display: block;
+  float: left;
+  padding: 15px;
+}
+#nav-horizontal > ul > li > a:hover {
+  background: #E8E8E8;
+}
+/* Dropdown */
+
+/* CONTEÚDO */
+#conteudo-principal {
+  background: #FFF;
+  padding: 20px;
+}
+
+/* RODAPÉ */
