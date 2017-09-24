@@ -2,53 +2,186 @@
   margin: 0;
   padding: 0;
 }
-a, a:hover, a:visited {
+a, a:visited {
   color: #2487D7;
   text-decoration: none;
 }
+a:hover {text-decoration: underline;}
 
 body {
-  background: #F7F7F7;
+  background: #FFF;
+  color: #111;
 }
 
-/* TOPO */
-#header-principal {overflow: auto;}
-#logo {
-  float: left;
-  padding: 20px;
-  line-height: 1;
-  width: 50%;
-  box-sizing: border-box;
-  vertical-align: bottom;
-}
-#logo img {height: 120px; float: left;}
-#logo h1 {font-size: 60px; margin-top: 9px;}
-#logo span {color: #888;}
-
-/* MENU */
-#nav-horizontal {
-  border-top: 1px solid #CCC;
-  border-bottom: 1px solid #CCC;
+/* ##################### TOPO ##################### */
+#header-principal {
+  background: linear-gradient(to bottom, rgb(242, 242, 242), rgba(255, 255, 255, 0), rgb(242, 242, 242));
   overflow: auto;
 }
-#nav-horizontal ul {
+#logo {
+  padding: 20px;
+  line-height: 1;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  overflow: auto;
+}
+#logo img {height: 120px;}
+#logo h1 {font-size: 60px;}
+#logo span {color: #888;}
+/* Menu Horizontal */
+#nav-horizontal {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  overflow: auto;
+  box-shadow: 0 2px 2px #d9d9d9;
+}
+#nav-horizontal > ul {
   list-style: none;
   padding: 0 15px;
 }
-#nav-horizontal > ul > li > a {
+#nav-horizontal > ul > li > a, .menu-dd-botao {
   display: block;
   float: left;
-  padding: 15px;
+  padding: 11px 15px;
+  cursor: pointer;
 }
-#nav-horizontal > ul > li > a:hover {
+#nav-horizontal > ul > li > a:hover, .menu-dd-botao:hover, .menu-dd-conteudo > ul > li > a:hover {
   background: #E8E8E8;
 }
-/* Dropdown */
-
-/* CONTEÚDO */
-#conteudo-principal {
+#nav-horizontal a:hover {text-decoration: none;}
+/* Menu Dropdown */
+.menu-dd {
+  float: left;
+}
+.menu-dd-botao {
+  float: none;
+}
+.menu-dd-conteudo {
+  position: absolute;
+  z-index: 1;
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+.menu-dd .menu-dd-conteudo {visibility: hidden; max-height: 0; transition: max-height 1s;}
+.menu-dd:hover .menu-dd-conteudo {visibility: visible; max-height: 500px;}
+.menu-dd-conteudo > ul {
+  list-style: none;
+}
+.menu-dd-conteudo > ul > li > a {
+  display: block;
   background: #FFF;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
-/* RODAPÉ */
+/* ##################### CONTEÚDO - Barras e centro ##################### */
+#conteudo-principal {
+  overflow: auto;
+}
+
+/* ##################### LATERAL ESQUERDA ##################### */
+#lateral-esq {
+  box-sizing: border-box;
+}
+/* Menu Vertical */
+#nav-vertical {}
+#nav-vertical > ul {
+  list-style: none;
+}
+#nav-vertical > ul > li > a {
+  display: block;
+  padding: 8px 15px;
+}
+#nav-vertical > ul > li > a:hover {
+  background: #E8E8E8;
+  text-decoration: none;
+}
+
+/* ##################### CONTEÚDO ##################### */
+#conteudo-centro {
+  box-sizing: border-box;
+  padding: 10px 25px;
+}
+#conteudo-centro h2 {
+  padding: 4px 0;
+  margin: 5px 0;
+  border-bottom: 1px solid #CCC;
+  color: #222;
+  font-weight: normal;
+}
+#conteudo-centro p img {
+  float: left;
+  max-width: 150px;
+  margin: 0 10px 10px 0;
+}
+/* Imagem Animada / Girando */
+.img-animada {
+  animation-name: girar;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes girar {
+  0%   {transform: rotateY(0deg);}
+  20%  {transform: rotateY(50deg);}
+  80%  {transform: rotateY(310deg);}
+  100% {transform: rotateY(360deg);}
+}
+
+/* ##################### LATERAL DIREITA ##################### */
+#lateral-dir {
+  box-sizing: border-box;
+  padding: 15px 25px;
+}
+#logo-lateral {margin-top: 10px;}
+
+/* ##################### RODAPÉ ##################### */
+#footer-principal {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  border-top: 1px solid #d9d9d9;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: 0 -1px 2px #d9d9d9;
+}
+
+/* ##################### RESPONSIVIDADE ##################### */
+@media screen and (min-width: 700px) {
+  #logo img {float: left;}
+  #logo h1 {margin-top: 17px;}
+  #lateral-esq {
+    float: left;
+    width: 220px;
+    height: 100vh;
+    border-right: 1px solid #d9d9d9;
+    box-shadow: 2px 0 2px #d9d9d9;
+  }
+  #conteudo-centro {
+    float: left;
+    width: calc(100% - 420px);
+    box-shadow: 2px 0 2px #d9d9d9;
+  }
+  #lateral-dir {
+    float: left;
+    width: 200px;
+    border-left: 1px solid #d9d9d9;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #logo {text-align: center;}
+  #logo h1 {font-size: 40px;}
+  #lateral-esq {
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0 2px 2px #d9d9d9;
+  }
+  #lateral-dir {
+    border-top: 1px solid #d9d9d9;
+    box-shadow: 0 -2px 2px #d9d9d9;
+  }
+  #logo-lateral {text-align: center;}
+}
