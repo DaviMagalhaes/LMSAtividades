@@ -150,7 +150,8 @@ body {
 }
 
 /* ##################### RESPONSIVIDADE ##################### */
-@media screen and (min-width: 700px) {
+/* Prof. Victor tomei a liberdade de alterar o max-width para o padrão 768px. Davi Magal. */
+@media screen and (min-width: 768px) {
   #logo img {float: left;}
   #logo h1 {margin-top: 17px;}
   #lateral-esq {
@@ -173,7 +174,6 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  /* Prof. Victor tomei a liberdade de alterar o max-width para 768px como padrão. Davi Magal. */
   #logo {text-align: center;}
   #logo h1 {font-size: 40px;}
   #lateral-esq {
