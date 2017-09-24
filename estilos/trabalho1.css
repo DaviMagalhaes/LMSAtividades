@@ -172,7 +172,8 @@ body {
     padding: 15px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+  /* Prof. Victor tomei a liberdade de alterar o max-width para 768px como padrão. Davi Magal. */
   #logo {text-align: center;}
   #logo h1 {font-size: 40px;}
   #lateral-esq {
