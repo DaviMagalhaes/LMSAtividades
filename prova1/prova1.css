@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a, a:visited, a:hover {color: blue; text-decoration: none;}
+
+/* ####### TOPO ####### */
+#nav-superior {
+  background: #DDD;
+  overflow: auto;
+}
+#nav-superior ul {
+  list-style: none;
+}
+#nav-superior > ul > li > a, .dd-button {
+  float: left;
+  display: block;
+  padding: 12px 20px;
+}
+#nav-superior > ul > li > a:hover, .dd-button:hover, .dd-content > ul > li > a:hover {
+  background: #CCC;
+}
+/* Menu Dropdown */
+.dd {
+  float: left;
+}
+.dd-button {
+  float: none;
+}
+.dd-content {
+  position: absolute;
+  background: #DDD;
+  overflow: hidden;
+  max-height: 0;
+  visibility: hidden;
+  transition: max-height 1s;
+  z-index: 1;
+}
+.dd:hover .dd-content {visibility: visible; max-height: 500px;}
+.dd-content > ul > li > a {
+  display: block;
+  padding: 10px 30px;
+}
+
+/* ####### CONTEÚDO - GALERIA ####### */
+#conteudo-galeria {
+  width: 100%;
+  height: 900px;
+}
+#coluna1, #coluna2-l1, #coluna2-l2 {
+  float: left;
+  width: 50%;
+}
+/* Coluna 1 */
+#coluna1 {
+  height: 100%;
+  position: relative;
+}
+#legenda {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+#legenda span {
+  font-size: 25px;
+  color: white;
+}
+/* Coluna 2 */
+#coluna2-l1, #coluna2-l2 {
+  height: 50%;
+}
+#coluna1 img, #coluna2-l2 img, #coluna2-l1 img:hover {
+  width: 100%;
+  height: 100%;
+}
+#coluna2-l1 img {
+  width: 85%;
+  height: 85%;
+  transition: all 100ms;
+}
+#coluna2-l2 {
+  position: relative;
+  background: radial-gradient(#AAA, #FFF);
+}
+#coluna2-l2 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
