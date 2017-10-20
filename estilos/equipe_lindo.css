@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.secao h2 {
+    color: #FFF;
+    height: 20vh;
+    font-size: 10vh;
+    text-align: center;
+    padding-top: 4vh;
+    cursor: pointer;
+}
+.secao div {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 300ms;
+    font-size: 4vh;
+}
+.secao.show div {
+    max-height: 80vh;
+    /* overflow-y: auto; */
+}
+.secao div p {
+    margin: 15px;
+}
+
+#secao-projeto h2 {background: #EECF2F;}
+#secao-ensaio h2 {background: #40E0D0;}
+#secao-adocao h2 {background: #E96B15;}
+#secao-apoio h2 {background: #ec1a25;}
+#secao-sobrenos h2 {background: #698499;}
+
