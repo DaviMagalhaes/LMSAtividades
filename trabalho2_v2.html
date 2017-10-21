@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Whatsapp Web / Davi Magalhães</title>
-    <link rel="stylesheet" href="estilos/trabalho2.css">
+    <link rel="stylesheet" href="estilos/trabalho2_v2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -14,11 +14,12 @@
         <div id="principal">
             <aside id="coluna">
                 <header id="coluna-titulo">
-                    <img src="imagens/usuario.png" />
+                    <!-- <img src="imagens/usuario.png" /> -->
+                    <h3>LMS Chat</h3>
                     <div class="buttons">
-                        <i class="material-icons">&#xE39E;</i>
-                        <i class="material-icons">&#xE0B7;</i>
-                        <i class="material-icons">&#xE5D4;</i>
+                        <i title="Login" class="material-icons">&#xE890;</i>
+                        <i title="Nova conversa" class="material-icons">&#xE0B7;</i>
+                        <i title="Definições" class="material-icons">&#xE5D4;</i>
                     </div>
                 </header>
                 <div id="pesquisar">
@@ -29,22 +30,14 @@
                 </div>
                 <div id="lista-contatos">
 
-
-
+                    <!-- Modelo
                     <div class="item-contato">
                         <img src="imagens/usuario.png" />
-                        <i>14:02</i>
+                        <i>12:34</i>
                         <b>Nome</b>
-                        <span>Ok</span>
+                        <span>Mensagem</span>
                     </div>
-                    <div class="item-contato">
-                        <img src="imagens/usuario.png" />
-                        <i>14:02</i>
-                        <b>Nome do contato</b>
-                        <span>Última mensagem</span>    
-                    </div>
-
-
+                    -->
 
                 </div>
             </aside>
@@ -53,55 +46,46 @@
                 <header id="conteudo-titulo">
                     <img src="imagens/usuario.png" />
                     <div class="buttons">
-                        <i class="material-icons">&#xE8B6;</i>
-                        <i class="material-icons">&#xE226;</i>
-                        <i class="material-icons">&#xE5D4;</i>
+                        <i title="Anexar arquivo" class="material-icons">&#xE226;</i>
+                        <i title="Definições" class="material-icons">&#xE5D4;</i>
                     </div>
-                    <b>Nome do contato</b><br />
-                    <span>Última visualização hoje as 17:00</span>
+                    <b id="contato-conversa">Nome do contato</b><br />
+                    <span>Última visualização hoje as 12:34</span>
                 </header>
 
                 <div id="lista-mensagens">
 
-
-
+                    <!-- Modelos para mensagem a esquerda e a direta
                     <div class="item-msg item-esq">
                         <div class="msg-esq">
-                            <span>Texto da mensagem aqui</span>
-                            <i>14:02</i>
-                        </div>
-                    </div>
-                    <div class="item-msg item-esq">
-                        <div class="msg-esq">
-                            <span>Segunda mensagem aqui</span>
-                            <i>14:02</i>
-                        </div>
-                    </div>
-
-                    <div class="item-msg item-dir">
-                        <div class="msg-dir">
-                            <span>Primeira resposta na conversa</span>
-                            <i>14:03</i>
+                            <span>Texto a esquerda</span>
+                            <i>12:34</i>
                         </div>
                     </div>
                     <div class="item-msg item-dir">
                         <div class="msg-dir">
-                            <span>Continuação da resposta</span>
-                            <i>14:04</i>
+                            <span>Texto a direita</span>
+                            <i>23:45</i>
                         </div>
                     </div>
+                    -->
 
-
+                    <div id="logo-conteudo">
+                        <img src="imagens/trab2_logo.png" />
+                        <p>Trabalho 2: chat da disciplina Linguagem de Marcação e Script da Universidade Federal do Ceará - Campus Quixadá</p>
+                    </div>
 
                 </div>
                 <div id="campo-mensagem">
-                    <i class="material-icons">&#xE420;</i>
+                    <i title="Emoticon" class="material-icons">&#xE420;</i>
                     <input type="text" placeholder="Mensagem" name="mensagem" />
-                    <i class="material-icons">&#xE31D;</i>
+                    <i title="Enviar" class="material-icons">&#xE163;</i>
                 </div>
             </article>
         </div>
     </div>
+
+    <script src="scripts/trabalho2_v2.js"></script>
     
 </body>
 </html>

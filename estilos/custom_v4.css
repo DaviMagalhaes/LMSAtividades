@@ -1,0 +1,24 @@
+
+.post-content p, .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content ul, .post-content ol, .post-content iframe {
+    line-height: 1.9rem;
+    margin: 1.0rem auto;
+}
+
+.post-content ul {margin: 0 auto 0;}
+
+pre code::after {content: none;}
+
+@media only screen and (min-width: 37.5rem) {
+    pre {padding: 1.5rem 0;}
+    footer {margin-top: 0;}
+}
+
+.highlighter-rouge {margin: 20px 0;}
+
+@media only screen and (max-width: 37.5rem) {
+    pre code {overflow-x: none;}
+}
+
+.progress-bar .completed {
+    background-color: #111;
+}

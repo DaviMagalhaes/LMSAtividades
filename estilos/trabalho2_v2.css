@@ -11,9 +11,9 @@ body {
 body::after {
     position: fixed;
     z-index: -1;
-    background-color: #009688;
+    background-color: #0076b3;
     width: 100%;
-    height: 127px;
+    height: 120px;
     content: '';
     top: 0;
     left: 0;
@@ -49,6 +49,12 @@ body::after {
     background-color: #FFF;
     cursor: pointer;
 }
+#coluna-titulo h3 {
+    float: left;
+    display: inline;
+    margin: 6px 15px;
+    color: #000033;
+}
 #coluna-titulo .buttons, #conteudo-titulo .buttons {float: right; color: #999;}
 #coluna-titulo .buttons i, #conteudo-titulo .buttons i {margin: 5px; cursor: pointer;}
 
@@ -77,9 +83,7 @@ body::after {
     height: 25px;
     border: none;
 }
-#pesquisar input::-webkit-input-placeholder {
-    color: #AAA;
-}
+#pesquisar input::-webkit-input-placeholder {color: #AAA;}
 
 #lista-contatos {
     overflow-y: scroll;
@@ -125,7 +129,8 @@ body::after {
     float: left;
     width: 600px;
     height: 100%;
-    background-image: url("../imagens/trab2_bg-chat.png");
+    background-color: #efefef;
+    /* background-image: url("../imagens/trab2_bg-chat.png"); */
     background-size: 400px;
     background-attachment: fixed;
     border-left: 1px solid #DDD;
@@ -140,9 +145,19 @@ body::after {
     line-height: 16px;
     text-align: left;
     border-top-right-radius: 5px;
+    display: none;
 }
 #conteudo-titulo b {font-size: 15px; font-weight: normal;}
 #conteudo-titulo span {font-size: 12px; color: #555;}
+
+#logo-conteudo img {
+    width: 200px;
+    margin-top: 130px;
+}
+#logo-conteudo p {
+    text-align: center;
+    color: #444;
+}
 
 #lista-mensagens {
     overflow-y: scroll;
@@ -172,13 +187,14 @@ body::after {
     padding: 7px;
 }
 .msg-esq {background: #FFF;}
-.msg-dir {background: #dcf8c6;}
+.msg-dir {background: #b5d3e2;}
 
 #campo-mensagem {
     background: #EFEFEF;
     padding: 8px;
     overflow: auto;
     border-bottom-right-radius: 5px;
+    display: none;
 }
 #campo-mensagem input {
     border: none;
