@@ -82,6 +82,7 @@ body::after {
     width: 220px;
     height: 25px;
     border: none;
+    outline: none;
 }
 #pesquisar input::-webkit-input-placeholder {color: #AAA;}
 
@@ -130,12 +131,15 @@ body::after {
     width: 600px;
     height: 100%;
     background-color: #efefef;
-    /* background-image: url("../imagens/trab2_bg-chat.png"); */
     background-size: 400px;
     background-attachment: fixed;
     border-left: 1px solid #DDD;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+#conteudo::after {
+    opacity: 0;
+    background-image: url("../imagens/trab2_bg-chat.png");
 }
 
 #conteudo-titulo {
@@ -203,6 +207,7 @@ body::after {
     border-radius: 7px;
     display: block;
     float: left;
+    outline: none;
 }
 #campo-mensagem i {
     margin: 5px 15px;
