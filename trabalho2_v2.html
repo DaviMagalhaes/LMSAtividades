@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Whatsapp Web / Davi Magalhães</title>
+    <title>LMS Chat / Davi Magalhães</title>
+    <link rel="icon" type="image/png" href="imagens/trab2_icon.png" >
     <link rel="stylesheet" href="estilos/trabalho2_v2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -14,12 +15,10 @@
         <div id="principal">
             <aside id="coluna">
                 <header id="coluna-titulo">
-                    <!-- <img src="imagens/usuario.png" /> -->
                     <h3>LMS Chat</h3>
                     <div class="buttons">
                         <i title="Login" class="material-icons">&#xE890;</i>
                         <i title="Nova conversa" class="material-icons">&#xE0B7;</i>
-                        <i title="Definições" class="material-icons">&#xE5D4;</i>
                     </div>
                 </header>
                 <div id="pesquisar">
@@ -46,8 +45,7 @@
                 <header id="conteudo-titulo">
                     <img src="imagens/usuario.png" />
                     <div class="buttons">
-                        <i title="Anexar arquivo" class="material-icons">&#xE226;</i>
-                        <i title="Definições" class="material-icons">&#xE5D4;</i>
+                        <!-- <i title="Anexar arquivo" class="material-icons">&#xE226;</i> -->
                     </div>
                     <b id="contato-conversa">Nome do contato</b><br />
                     <span>Última visualização hoje as 12:34</span>
@@ -76,10 +74,50 @@
                     </div>
 
                 </div>
+                <div id="menu-emoticons">
+
+                    <img src="imagens/trab2_emoticons/angry-1.png" />
+                    <img src="imagens/trab2_emoticons/angry.png" />
+                    <img src="imagens/trab2_emoticons/bored-1.png" />
+                    <img src="imagens/trab2_emoticons/bored-2.png" />
+                    <img src="imagens/trab2_emoticons/bored.png" />
+                    <img src="imagens/trab2_emoticons/confused-1.png" />
+                    <img src="imagens/trab2_emoticons/confused.png" />
+                    <img src="imagens/trab2_emoticons/crying-1.png" />
+                    <img src="imagens/trab2_emoticons/crying.png" />
+                    <img src="imagens/trab2_emoticons/embarrassed.png" />
+                    <img src="imagens/trab2_emoticons/emoticons.png" />
+                    <img src="imagens/trab2_emoticons/happy-1.png" />
+                    <img src="imagens/trab2_emoticons/happy-2.png" />
+                    <img src="imagens/trab2_emoticons/happy-3.png" />
+                    <img src="imagens/trab2_emoticons/happy-4.png" />
+                    <img src="imagens/trab2_emoticons/happy.png" />
+                    <img src="imagens/trab2_emoticons/ill.png" />
+                    <img src="imagens/trab2_emoticons/in-love.png" />
+                    <img src="imagens/trab2_emoticons/kissing.png" />
+                    <img src="imagens/trab2_emoticons/mad.png" />
+                    <img src="imagens/trab2_emoticons/nerd.png" />
+                    <img src="imagens/trab2_emoticons/ninja.png" />
+                    <img src="imagens/trab2_emoticons/quiet.png" />
+                    <img src="imagens/trab2_emoticons/sad.png" />
+                    <img src="imagens/trab2_emoticons/secret.png" />
+                    <img src="imagens/trab2_emoticons/smart.png" />
+                    <img src="imagens/trab2_emoticons/smile.png" />
+                    <img src="imagens/trab2_emoticons/smiling.png" />
+                    <img src="imagens/trab2_emoticons/surprised-1.png" />
+                    <img src="imagens/trab2_emoticons/surprised.png" />
+                    <img src="imagens/trab2_emoticons/suspicious-1.png" />
+                    <img src="imagens/trab2_emoticons/suspicious.png" />
+                    <img src="imagens/trab2_emoticons/tongue-out-1.png" />
+                    <img src="imagens/trab2_emoticons/tongue-out.png" />
+                    <img src="imagens/trab2_emoticons/unhappy.png" />
+                    <img src="imagens/trab2_emoticons/wink.png" />
+
+                </div>
                 <div id="campo-mensagem">
-                    <i title="Emoticon" class="material-icons">&#xE420;</i>
-                    <input type="text" placeholder="Mensagem" name="mensagem" />
-                    <i title="Enviar" class="material-icons">&#xE163;</i>
+                    <i title="Emoticon" class="material-icons" id="btn-emoticons">&#xE420;</i>
+                    <div id="input-msg" contenteditable="true"></div>
+                    <i title="Enviar" class="material-icons" id="btn-enviar">&#xE163;</i>
                 </div>
             </article>
         </div>

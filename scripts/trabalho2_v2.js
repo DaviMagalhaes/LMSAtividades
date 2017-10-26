@@ -9,7 +9,14 @@
     let conteudoTituloElem = document.querySelector("#conteudo-titulo");
     let conteudoElem = document.querySelector("#conteudo");
     let contatoConversaElem = document.querySelector("#contato-conversa");
+    let menuEmoticonsElem = document.querySelector("#menu-emoticons");
+    let btnEmoticons = document.querySelector("#btn-emoticons");
     let campoMensagemElem = document.querySelector("#campo-mensagem");
+    let inputMsgElem = document.querySelector("#input-msg");
+    let btnEnviarElem = document.querySelector("#btn-enviar");
+
+    // Variáveis importantes
+    let contatoAtual;
 
     // Mostrar contatos e última mensagem trocada na lista de contatos
     for(let i in dados.conversas) {
@@ -24,13 +31,19 @@
         '</div>';
 
         listaContatosElem.innerHTML += html;
+
+        // Só pra saber que existe
+        /*let li = document.createElement('li');
+        let text = document.createTextNode(name +" " +familyName);
+        li.appendChild(text);
+        friendList.appendChild(li);*/
     }
 
-    // Função para mostrar a conversa com o contato selecionado
+    // Mostrar conversa com o contato selecionado
     function mostrarConversa(c) {
         listaMensagensElem.innerHTML = "";
         conteudoTituloElem.style.display = "block";
-        conteudoElem.style.backgroundImage = 'url("imagens/trab2_bg-chat.png")';
+        conteudoElem.style.backgroundImage = "url('imagens/trab2_bg-chat.png')";
         campoMensagemElem.style.display = "block";
 
         for(let i=0; i<dados.conversas[c].mensagens.length; i++) {
@@ -47,11 +60,65 @@
         }
 
         contatoConversaElem.innerHTML = dados.conversas[c].usuario;
+        inputMsgElem.innerHTML = "";
+        contatoAtual = c;
     }
 
+    // Tratar exibição do menu emoticons
+    function menuEmoticons() {
+        menuEmoticonsElem.classList.toggle("show");
+        listaMensagensElem.classList.toggle("showing-menu-emoticons");
+    }
+
+    // Adiciona emoticon ao campo
+    function addEmoticon(img) {
+        inputMsgElem.appendChild(img);
+        inputMsgElem.focus();
+    }
+
+    // Enviar mensagem
+    function enviarMensagem(mensagem) {
+        let novaMensagem = {usuario:usuario,texto:mensagem};
+        dados.conversas[contatoAtual].mensagens.push(novaMensagem);
+
+        mostrarConversa(contatoAtual);
+        inputMsgElem.innerHTML = "";
+    }
+
+    // Evita colar HTML no input
+    inputMsgElem.addEventListener("paste", function(e) {
+        e.preventDefault();
+        let texto = e.clipboardData.getData("text/plain");
+        document.execCommand("insertHTML", false, texto);
+    });
+
+    // Evento: seleciona contato
     let listaContatos = document.querySelectorAll(".item-contato");
     for(let i=0; i<listaContatos.length; i++) {
         listaContatos[i].addEventListener("click", function() {
             mostrarConversa(i);
         })
     }
+
+    // Evento: abrir menu emoticons
+    btnEmoticons.addEventListener("click", menuEmoticons);
+
+    // Evento: adicionar emoticon ao campo
+    menuEmoticonsElem.addEventListener("click", function(elem) {
+        if(elem.target.tagName.toLowerCase() == "img") {
+            addEmoticon(elem.target.cloneNode(true));
+        }
+    });
+
+    // Evento: enviar mensagem
+    btnEnviarElem.addEventListener("click", function() {
+        enviarMensagem(inputMsgElem.innerHTML);
+    });
+
+    // Evento: enviar mensagem ao teclar Enter
+    inputMsgElem.addEventListener("keydown", function(e){
+        if(e.key == "Enter") {
+            e.preventDefault();
+            enviarMensagem(inputMsgElem.innerHTML);
+        }
+    });
