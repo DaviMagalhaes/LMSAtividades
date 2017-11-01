@@ -1,6 +1,7 @@
 
     // Dados
     let usuario = "victor23";
+    
     let dados = JSON.parse('{"conversas":[{"usuario": "joao03","mensagens": [{"usuario": "joao03","texto": "Tudo bem?"},{"usuario": "victor23","texto": "Tudo Tranqs"},{"usuario": "joao03","texto": "Que bom"}]},{"usuario": "maria2000","mensagens": [{"usuario": "maria2000","texto": "Na paz?"},{"usuario": "victor23","texto": "Show"},{"usuario": "maria2000","texto": "Que bom"}]},{"usuario": "robson_alves","mensagens": [{"usuario": "victor23","texto": "Bom?"},{"usuario": "robson_alves","texto": "Bom"},{"usuario": "victor23","texto": "Que bom"}]}]}');
 
     // Recuperação dos elementos pertinentes à frente
@@ -44,6 +45,8 @@
         listaMensagensElem.innerHTML = "";
         conteudoTituloElem.style.display = "block";
         conteudoElem.style.backgroundImage = "url('imagens/trab2_bg-chat.png')";
+        menuEmoticonsElem.classList.remove("show");
+        listaMensagensElem.classList.remove("showing-menu-emoticons");
         campoMensagemElem.style.display = "block";
 
         for(let i=0; i<dados.conversas[c].mensagens.length; i++) {

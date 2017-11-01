@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LMS Chat / Davi Magalhães</title>
+    <link rel="icon" type="image/png" href="imagens/trab2_icon.png" >
+    <link rel="stylesheet" href="estilos/trabalho2_v0.2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div align="center">
+        <div id="principal">
+            <aside id="coluna">
+                <header id="coluna-titulo">
+                    <h3>LMS Chat</h3>
+                    <div class="buttons">
+                        <i title="Login" class="material-icons">&#xE890;</i>
+                        <i title="Nova conversa" class="material-icons">&#xE0B7;</i>
+                    </div>
+                </header>
+                <div id="pesquisar">
+                    <div id="campo-pesquisar">
+                        <i class="material-icons">&#xE8B6;</i>
+                        <input placeholder="Pesquisar" type="text" name="pesquisar" />
+                    </div>
+                </div>
+                <div id="lista-contatos">
+
+                    <!-- Modelo
+                    <div class="item-contato">
+                        <img src="imagens/usuario.png" />
+                        <i>12:34</i>
+                        <b>Nome</b>
+                        <span>Mensagem</span>
+                    </div>
+                    -->
+
+                </div>
+            </aside>
+
+            <article id="conteudo">
+                <header id="conteudo-titulo">
+                    <img src="imagens/usuario.png" />
+                    <div class="buttons">
+                        <!-- <i title="Anexar arquivo" class="material-icons">&#xE226;</i> -->
+                    </div>
+                    <b id="contato-conversa">Nome do contato</b><br />
+                    <span>Última visualização hoje as 12:34</span>
+                </header>
+
+                <div id="lista-mensagens">
+
+                    <!-- Modelos para mensagem a esquerda e a direta
+                    <div class="item-msg item-esq">
+                        <div class="msg-esq">
+                            <span>Texto a esquerda</span>
+                            <i>12:34</i>
+                        </div>
+                    </div>
+                    <div class="item-msg item-dir">
+                        <div class="msg-dir">
+                            <span>Texto a direita</span>
+                            <i>23:45</i>
+                        </div>
+                    </div>
+                    -->
+
+                    <div id="logo-conteudo">
+                        <img src="imagens/trab2_logo.png" />
+                        <p>Trabalho 2: chat da disciplina Linguagem de Marcação e Script da Universidade Federal do Ceará - Campus Quixadá</p>
+                    </div>
+
+                </div>
+                <div id="menu-emoticons">
+
+                    <img src="imagens/trab2_emoticons/angry-1.png" />
+                    <img src="imagens/trab2_emoticons/angry.png" />
+                    <img src="imagens/trab2_emoticons/bored-1.png" />
+                    <img src="imagens/trab2_emoticons/bored-2.png" />
+                    <img src="imagens/trab2_emoticons/bored.png" />
+                    <img src="imagens/trab2_emoticons/confused-1.png" />
+                    <img src="imagens/trab2_emoticons/confused.png" />
+                    <img src="imagens/trab2_emoticons/crying-1.png" />
+                    <img src="imagens/trab2_emoticons/crying.png" />
+                    <img src="imagens/trab2_emoticons/embarrassed.png" />
+                    <img src="imagens/trab2_emoticons/emoticons.png" />
+                    <img src="imagens/trab2_emoticons/happy-1.png" />
+                    <img src="imagens/trab2_emoticons/happy-2.png" />
+                    <img src="imagens/trab2_emoticons/happy-3.png" />
+                    <img src="imagens/trab2_emoticons/happy-4.png" />
+                    <img src="imagens/trab2_emoticons/happy.png" />
+                    <img src="imagens/trab2_emoticons/ill.png" />
+                    <img src="imagens/trab2_emoticons/in-love.png" />
+                    <img src="imagens/trab2_emoticons/kissing.png" />
+                    <img src="imagens/trab2_emoticons/mad.png" />
+                    <img src="imagens/trab2_emoticons/nerd.png" />
+                    <img src="imagens/trab2_emoticons/ninja.png" />
+                    <img src="imagens/trab2_emoticons/quiet.png" />
+                    <img src="imagens/trab2_emoticons/sad.png" />
+                    <img src="imagens/trab2_emoticons/secret.png" />
+                    <img src="imagens/trab2_emoticons/smart.png" />
+                    <img src="imagens/trab2_emoticons/smile.png" />
+                    <img src="imagens/trab2_emoticons/smiling.png" />
+                    <img src="imagens/trab2_emoticons/surprised-1.png" />
+                    <img src="imagens/trab2_emoticons/surprised.png" />
+                    <img src="imagens/trab2_emoticons/suspicious-1.png" />
+                    <img src="imagens/trab2_emoticons/suspicious.png" />
+                    <img src="imagens/trab2_emoticons/tongue-out-1.png" />
+                    <img src="imagens/trab2_emoticons/tongue-out.png" />
+                    <img src="imagens/trab2_emoticons/unhappy.png" />
+                    <img src="imagens/trab2_emoticons/wink.png" />
+
+                </div>
+                <div id="campo-mensagem">
+                    <i title="Emoticon" class="material-icons" id="btn-emoticons">&#xE420;</i>
+                    <div id="input-msg" contenteditable="true"></div>
+                    <i title="Enviar" class="material-icons" id="btn-enviar">&#xE163;</i>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script src="scripts/trabalho2_v0.2.js"></script>
+    
+</body>
+</html>
