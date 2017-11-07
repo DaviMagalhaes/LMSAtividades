@@ -6,28 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LMS Chat / Davi Magalhães</title>
     <link rel="icon" type="image/png" href="imagens/trab2_icon.png" >
-    <link rel="stylesheet" href="estilos/trabalho2_v2.css">
+    <link rel="stylesheet" href="estilos/trabalho2_v0.4.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-    <div align="center">
+    <div id="modal-overlay"></div>
+    <div id="login-modal">
+        <h3>Login</h3>
+        <div id="login-form">
+            <label for="apelido">Apelido:</label>
+            <input id="login-apelido" type="text" placeholder="Seu apelido" name="apelido"
+                maxlength="100" autocomplete="off" />
+            <i class="material-icons" id="login-user-submit">&#xE890;</i>
+        </div>
+    </div>
+    <div id="group-modal">
+        <h3>Novo grupo</h3>
+        <div id="group-form">
+            <label for="group-n">Nome:</label>
+            <input id="group-name" type="text" placeholder="Nome do grupo" name="group-n"
+                maxlength="100" autocomplete="off" />
+            <i class="material-icons" id="group-submit">&#xE890;</i>
+        </div>
+    </div>
+
+    <div align="center">&nbsp;
         <div id="principal">
             <aside id="coluna">
                 <header id="coluna-titulo">
                     <h3>LMS Chat</h3>
                     <div class="buttons">
-                        <i title="Login" class="material-icons">&#xE890;</i>
-                        <i title="Nova conversa" class="material-icons">&#xE0B7;</i>
+                        <i title="Entrar" class="material-icons" id="login-user">
+                            &#xE890;</i>
+                        <i title="Novo grupo" class="material-icons" id="new-chat">
+                            &#xE0B7;</i>
                     </div>
                 </header>
-                <div id="pesquisar">
-                    <div id="campo-pesquisar">
-                        <i class="material-icons">&#xE8B6;</i>
-                        <input placeholder="Pesquisar" type="text" name="pesquisar" />
-                    </div>
-                </div>
                 <div id="lista-contatos">
+
+                    <!-- <div id="coluna-msg">
+                        <p>Entre para visualizar os grupos.</p>
+                    </div> -->
 
                     <!-- Modelo
                     <div class="item-contato">
@@ -44,11 +64,7 @@
             <article id="conteudo">
                 <header id="conteudo-titulo">
                     <img src="imagens/usuario.png" />
-                    <div class="buttons">
-                        <!-- <i title="Anexar arquivo" class="material-icons">&#xE226;</i> -->
-                    </div>
-                    <b id="contato-conversa">Nome do contato</b><br />
-                    <span>Última visualização hoje as 12:34</span>
+                    <b id="contato-conversa">Nome do contato</b>
                 </header>
 
                 <div id="lista-mensagens">
@@ -123,7 +139,7 @@
         </div>
     </div>
 
-    <script src="scripts/trabalho2_v2.js"></script>
+    <script src="scripts/trabalho2_v0.4.js"></script>
     
 </body>
 </html>
