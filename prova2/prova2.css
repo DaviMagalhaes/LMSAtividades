@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ACCORDION */
+#accordion {margin: 30px;}
+.collapse {
+    margin: 10px 0;
+    border: 1px solid #666;
+}
+.collapse h3 {
+    background: #999;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.collapse p {
+    background: #DDD;
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+.collapse.show p {max-height: 200px;}
+
+/* FORMULÁRIO */
+#form-formulario {
+    margin: 30px;
+    padding: 20px;
+    background: #DDD;
+    border: 1px solid #AAA;
+}
+#form-formulario h2 {
+    background: #AAA;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+}
