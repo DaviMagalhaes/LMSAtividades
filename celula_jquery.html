@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Célula : jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>Lista de Contatos</h1>
+
+    <div>
+        <ul id="lista-contatos">
+            <li>Nome - 8899123456</li>
+            <li>Nome - 8899123456</li>
+            <li>Nome - 8899123456</li>
+        </ul>
+    </div>
+
+    <form>
+        Nome: <input type="text" id="nome" /><br />
+        Telefone: <input type="number" id="telefone" /><br />
+        <button id="btn-salvar">Salvar</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+
+            let listaContatos = [];
+
+            // Carrega os contatos
+            function carregarContatos() {
+                $.ajax({
+                    type: "GET", 
+                    url: "http://rest.learncode.academy/api/davimagal/usuarios",
+                    success: function(data) {
+                        listaContatos = data;
+                        console.log(data);
+                        mostrarContatos();
+                    }
+                });
+            }
+            carregarContatos();
+
+            // Salva um contato
+            $("#btn-salvar").click(function() {
+                event.preventDefault();
+
+                let contato = {nome: $("#nome").val(), telefone: $("#telefone").val()};
+                $.ajax({
+                    type: "POST",
+                    url: "http://rest.learncode.academy/api/davimagal/usuarios",
+                    data: contato,
+                    success: function(data){
+                        carregarContatos();
+                    }
+                });
+                $("#nome").val("");
+                $("#telefone").val("");
+            });
+
+            function mostrarContatos(){
+                $("#lista-contatos").html("");
+                for (let i=0; i<listaContatos.length; i++){
+                    let contato = listaContatos[i];
+                    let text = contato.nome + " - " + contato.telefone;
+                    let bilu = $("<li></li>").text(text);
+                    $("#lista-contatos").append(bilu); 
+                } 
+            }
+
+
+
+        });
+    </script>
+</body>
+</html>
