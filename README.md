@@ -1,5 +1,5 @@
 # LMSAtividades
-Todas as atividades, trabalhos e provas da disciplinas de Linguagem de Marcação e Scripts da Universidade Federal do Ceará - Campus Quixadá 2017.2 - Curso de Design Digital.
+Todas as atividades, trabalhos e provas da disciplina Linguagem de Marcação e Scripts da Universidade Federal do Ceará - Campus Quixadá 2017.2 - Curso Design Digital.
 
 # Referência
 Descrição das atividades em:
