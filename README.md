@@ -1,5 +1,6 @@
-# lms_atividades
-Todas as atividades de LMS da UFC 2017.2.
+# LMSAtividades
+Todas as atividades, trabalhos e provas da disciplinas de Linguagem de Marcação e Scripts da Universidade Federal do Ceará - Campus Quixadá 2017.2 - Curso de Design Digital.
 
 # Referência
+Descrição das atividades em:
 https://sites.google.com/view/victorufc/2017-2/linguagens-de-marca%C3%A7%C3%A3o-e-script
